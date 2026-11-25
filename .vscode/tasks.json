@@ -1,0 +1,14 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Start WorkOrbit",
+      "type": "shell",
+      "command": "npm install && npm run dev",
+      "windows": { "command": "npm install; if ($?) { npm run dev }", "options": { "shell": { "executable": "powershell.exe", "args": ["-ExecutionPolicy", "Bypass", "-Command"] } } },
+      "isBackground": true,
+      "problemMatcher": [],
+      "group": { "kind": "build", "isDefault": true }
+    }
+  ]
+}
